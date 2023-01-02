@@ -1,3 +1,17 @@
+#container{
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+    width: fit-content;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: #9fa76b 5px solid;
+}
+
 .row{
     margin: 0;
     display: flex;
@@ -15,6 +29,8 @@
     font-size: 1.5em;
     cursor: pointer;
     transition: 0.3s;
+    border: none;
+    border-radius: 5px;
 }
 .btn:hover{
     background: #f1f1f1;
@@ -25,48 +41,18 @@
 .btn:focus{
     outline: none;
 }
-.btn:disabled{
-    background: #f1f1f1;
-    color: #e1e1e1;
-    cursor: not-allowed;
-}
-.btn:disabled:hover{
-    background: #f1f1f1;
-    color: #e1e1e1;
-    cursor: not-allowed;
-}
-.btn:disabled:active{
-    background: #f1f1f1;
-    color: #e1e1e1;
-    cursor: not-allowed;
-}
-.btn:disabled:focus{
-    outline: none;
-}
-.btn:disabled:active:focus{
-    outline: none;
-}
-.btn:disabled:hover:focus{
-    outline: none;
-}
-.btn:disabled:active:hover{
-    background: #f1f1f1;
-    color: #e1e1e1;
-    cursor: not-allowed;
-}
-#input{
+
+/* #input{
     margin: 0;
     padding: 0;
-    height: 50px;
-    width: 50px;
-    background: none;
+    height: 100px;
+    background: beige;
     font-size: 1.5em;
     border: none;
     border-bottom: 1px solid #e1e1e1;
     transition: 0.3s;
-
-}
-#input:focus{
+} */
+/* #input:focus{
     outline: none;
     border-bottom: 1px solid #f1f1f1;
 }
@@ -74,26 +60,33 @@
     background: #f1f1f1;
     color: #e1e1e1;
     cursor: not-allowed;
+} */
+#display{
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
 }
-#input:disabled:hover{
-    background: #f1f1f1;
-    color: #e1e1e1;
-    cursor: not-allowed;
+#current{
+    font-size: 1.5em;
 }
-#input:disabled:active{
-    background: #f1f1f1;
-    color: #e1e1e1;
-    cursor: not-allowed;
+#previous{
+    font-size: 1em;
+    color: #a19e9e;
 }
-#input:disabled:focus{
+#container button{
+    border-radius: 15px;
+    border: 2px;
     outline: none;
-    border-bottom: 1px solid #f1f1f1;
 }
-#input:disabled:active:focus{
-    outline: none;
-    border-bottom: 1px solid #f1f1f1;
+#clear{
+    width: 92px;
 }
-#input:disabled:hover:focus{
-    outline: none;
-    border-bottom: 1px solid #f1f1f1;
+#equal{
+    width: 92px;
 }
+.buttons{background: #d8e96e;}

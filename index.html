@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="shortcut icon" href="/icons8-calculator-96.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
@@ -14,39 +15,43 @@
     <div id="container">
         <center>
         <div id="display">
-            <input type="text" id="input" value="0" disabled>
+            <!-- <input type="text" id="input" placeholder="0"> -->
+            <div id="previous">799</div>
+            <div id="current">5645</div>
         </div>
-        <div class="row">
-            <center>
-            <button class="btn" onclick="clearDisplay()">C</button>
-            <button class="btn" onclick="backspace()">⌫</button>
-            <button class="btn" onclick="addOperator('/')">/</button>
-            <button class="btn" onclick="addOperator('*')">*</button>
+        <div class="buttons">
+            <div class="row">
+                <center>
+                <button class="btn" id="clear" onclick="clearDisplay()">C</button>
+                <button class="btn" id="delete" onclick="backspace()">⌫</button>
+                <button class="btn" id="operation" onclick="addOperator('/')">/</button>
+                </center>
+            </div>
+            <div class="row">
+                <button class="btn" id="num" onclick="addNumber(7)">7</button>
+                <button class="btn" id="num" onclick="addNumber(8)">8</button>
+                <button class="btn" id="num" onclick="addNumber(9)">9</button>
+                <button class="btn" id="operation" onclick="addOperator('*')">*</button>
+            </div>
+            <div class="row">
+                <button class="btn" id="num" onclick="addNumber(4)">4</button>
+                <button class="btn" id="num" onclick="addNumber(5)">5</button>
+                <button class="btn" id="num" onclick="addNumber(6)">6</button>
+                <button class="btn" id="operation" onclick="addOperator('-')">-</button>
+            </div>
+            <div class="row">
+                <button class="btn" id="num" onclick="addNumber(1)">1</button>
+                <button class="btn" id="num" onclick="addNumber(2)">2</button>
+                <button class="btn" id="num" onclick="addNumber(3)">3</button>
+                <button class="btn" id="operation" onclick="addOperator('+')">+</button>
+            </div>
+            <div class="row">
+                <button class="btn" id="num" onclick="addNumber(0)">0</button>
+                <button class="btn" id="num" onclick="addNumber('.')">.</button>
+                <button class="btn" id="equal" onclick="calculate()">=</button>
+            </div>
+            </div>
             </center>
-        </div>
-        <div class="row">
-            <button class="btn" onclick="addNumber(7)">7</button>
-            <button class="btn" onclick="addNumber(8)">8</button>
-            <button class="btn" onclick="addNumber(9)">9</button>
-            <button class="btn" onclick="addOperator('-')">-</button>
-        </div>
-        <div class="row">
-            <button class="btn" onclick="addNumber(4)">4</button>
-            <button class="btn" onclick="addNumber(5)">5</button>
-            <button class="btn" onclick="addNumber(6)">6</button>
-            <button class="btn" onclick="addOperator('+')">+</button>
-        </div>
-        <div class="row">
-            <button class="btn" onclick="addNumber(1)">1</button>
-            <button class="btn" onclick="addNumber(2)">2</button>
-            <button class="btn" onclick="addNumber(3)">3</button>
-            <button class="btn" onclick="calculate()">=</button>
-        </div>
-        <div class="row">
-            <button class="btn" onclick="addNumber(0)">0</button>
-            <button class="btn" onclick="addNumber('.')">.</button>
-        </div>
-        </center>
     </div>
     </center>
 </body>
